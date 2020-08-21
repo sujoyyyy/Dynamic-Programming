@@ -1,4 +1,4 @@
-//recursive code maximum profit
+//dp code maximum profit
 #include<bits/stdc++.h>
 using namespace std;
 int t[100][1000];
