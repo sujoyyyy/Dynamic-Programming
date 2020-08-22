@@ -1,9 +1,17 @@
-//Program to check whether a subset exists which adds up to the given sum.
+//Program to check whether 2 partitions exist which have equal sum.
 #include<bits/stdc++.h>
 using namespace std;
-bool t[100][1000];
-bool subsetsum(int arr[], int sum,int n)
-{  
+bool t[100][1000];        //t[n+1][sum+1]
+bool equalsum(int arr[], int n)
+{  int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        sum+=arr[i];
+    }
+    if(sum%2!=0)
+        return false;
+
+  sum=sum/2;
     for(int i=0;i<n+1;i++)
     {
         for(int j=0;j<sum+1;j++)
@@ -33,11 +41,10 @@ bool subsetsum(int arr[], int sum,int n)
 return t[n][sum];
 }
 int main()
-{   int arr[] = { 2,3,6,10 }; //example cases
-    int sum= 18436; 
+{   int arr[] = { 2,3,5,7 }; //example cases
     int n = sizeof(arr) / sizeof(arr[0]); 
     memset(t,-false,sizeof(t));
-    if(subsetsum( arr,sum,n))
+    if(equalsum( arr,n))
         printf("YES");
     else
     {
