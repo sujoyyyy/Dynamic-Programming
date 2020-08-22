@@ -41,7 +41,7 @@ bool equalsum(int arr[], int n)
 return t[n][sum];
 }
 int main()
-{   int arr[] = { 2,3,5,7 }; //example cases
+{   int arr[] = { 2,4 }; //example cases
     int n = sizeof(arr) / sizeof(arr[0]); 
     memset(t,-false,sizeof(t));
     if(equalsum( arr,n))
