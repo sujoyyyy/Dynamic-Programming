@@ -33,7 +33,7 @@ int counting(int arr[], int sum,int n)
 return t[n][sum];
 }
 int main()
-{   int arr[] = { 2,3,4,1}; //example cases
+{   int arr[] = { 2,3,4,7}; //example cases
     int sum= 5; 
     int n = sizeof(arr) / sizeof(arr[0]); 
     memset(t,0,sizeof(t));
