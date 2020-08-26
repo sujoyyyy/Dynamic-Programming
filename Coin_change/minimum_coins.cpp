@@ -16,7 +16,7 @@ int counting(int arr[], int sum,int n) //unbounded subset sum
         }
     }
     int j=1;
- for(int i =1;j<sum+1;j++)
+ for(int i =1;j<sum+1;j++) //twist in the initialization
  {
      if(j%arr[0]==0)
      {
