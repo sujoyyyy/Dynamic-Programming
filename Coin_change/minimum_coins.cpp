@@ -45,8 +45,8 @@ int counting(int arr[], int sum,int n) //unbounded subset sum
 return t[n][sum];
 }
 int main()
-{   int coin[] = {1,2,3}; //example cases
-    int amount= 5; 
+{   int coin[] = {9, 6, 5, 1}; //example cases
+    int amount= 11; 
     int n = sizeof(coin) / sizeof(coin[0]); 
     memset(t,0,sizeof(t));
     int count= counting(coin,amount,n);
