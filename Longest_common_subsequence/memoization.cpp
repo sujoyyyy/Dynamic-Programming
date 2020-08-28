@@ -4,41 +4,30 @@ using namespace std;
 int t[100][1000];
 int LCS(string X,string Y, int m,int n)
 {
-    for (int i = 0; i < m+1; i++)
-    {
-        for (int j = 0; i < n+1; i++)
-        {
-            if(m==0||n==0)
-                t[i][j]=0;
     
-        }
-        
-    }      
+   if(m==0||n==0)
+    return 0;
+    
+             
    if(t[m][n]!=-1)
    {
    	return t[m][n];
+    }
+
+   if(X[m-1]==Y[n-1])
+    {
+     return t[m][n]= 1+LCS(X,Y,m-1,n-1);
+    }
+   else
+   {
+     return t[m][n]= max(LCS(X,Y,m,n-1),LCS(X,Y, m-1, n-1));
    }
-for(int i=1;i<m+1;i++){
- for (int j = 1; j < n+1; j++)
-        {
             
-            if(X[i-1]==Y[j-1])
-            {
-               t[i][j]= 1+LCS(X,Y,i-1,j-1);
-            }
-            else
-            {
-                t[i][j]= max(LCS(X,Y,i,j-1),LCS(X,Y, i-1, j-1));
-            }
-        }
-        
-       }
-return t[m][n];
 
 }
 int main()
 {
-    string X="sujoy";
+    string X="sujffy";
     string Y="sujoyyyy";
     int m= X.length();
     int n = Y.length();
