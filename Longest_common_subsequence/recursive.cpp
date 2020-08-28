@@ -8,7 +8,7 @@ int LCS(string X,string Y, int m,int n)
         return 0;
     
 
-if(X[n-1]==Y[n-1])
+if(X[m-1]==Y[n-1])
 {
     return 1+LCS(X,Y,m-1,n-1);
 }
@@ -20,10 +20,10 @@ else
 }
 int main()
 {
-    char* X="sujoy";
-    char* Y="sujoyy";
-    int m=5;
-    int n = 6;
-    cout<<m<<n;
+    string X="sujoy";
+    string Y="sujoyy";
+    int m=X.length();
+    int n = Y.length();
+    cout<<LCS(X,Y,m,n)<<endl;
     return 0;
 }
