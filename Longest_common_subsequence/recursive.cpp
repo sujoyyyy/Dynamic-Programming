@@ -1,4 +1,6 @@
 #include<bits/stdc++.h>
+#include<string.h>
+#include<string>
 using namespace std;
 int LCS(string X,string Y, int m,int n)
 {
@@ -18,10 +20,10 @@ else
 }
 int main()
 {
-    string X="sujoy";
-    string Y="sujoyyyy";
-    int m= X.length();
-    int n = Y.length();
-    cout<<LCS(X,Y,m,n);
+    char* X="sujoy";
+    char* Y="sujoyy";
+    int m=5;
+    int n = 6;
+    cout<<m<<n;
     return 0;
 }
