@@ -34,13 +34,14 @@ return t[m][n];
 int main()
 {
     string X="AXY";
-    string Y="ADXCPY";
+    int p=X.length();
+    string Y="ADX";
     X=Y+X;
     Y=X;
     int m=X.length();
     int n = Y.length();
     memset(t,-1,sizeof(t));
-    if(LCS(X,Y,m,n)>0)
+    if(LCS(X,Y,m,n)>=p)
     {
         cout<<"True"<<endl;
     }
