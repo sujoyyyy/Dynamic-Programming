@@ -45,6 +45,6 @@ int solve(string s,int i,int j)
 int main()
 {   
     string s= "ababbbabbababa";
-    cout<<solve(s,0,s.length()-1);
+    cout<<solve(s,0,s.length()-1)<<endl;;
     return 0;   
 }
