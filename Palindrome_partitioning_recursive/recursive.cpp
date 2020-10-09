@@ -5,27 +5,33 @@ Example:
 #include<string.h>
 #include<string>
 using namespace std;
-bool ispalindrome(string s)
-{
-   string s1= s;
-   reverse(s1.begin(),s1.end());
-   if(s1.compare(s)==0)
-   {
-       return true;
-   }
-   else
-   {
-       return false;
-   }    
-}
+bool ispalindrome(string s, int i, int j) {	
+		if(i == j) {
+			return true;
+		}
+		
+		if(i > j) {
+			return true;
+		}
+		
+		while( i < j) {
+			if(s[i] != s[j]) {
+				return false;
+			}
+			
+			i++;
+			j--;
+		}
+		return true;
+		
+	}
 int solve(string s,int i,int j)
 {
     if(i>=j)
     {
         return 0;
     }
-    string s1= s.substr(i,j+1);
-    if(ispalindrome(s1))
+    if(ispalindrome(s,i,j))
     {
         return 0;
     }
@@ -44,7 +50,7 @@ int solve(string s,int i,int j)
 }
 int main()
 {   
-    string s= "ababbbabbababa";
+    string s= "abcde";
     cout<<solve(s,0,s.length()-1)<<endl;;
     return 0;   
 }
